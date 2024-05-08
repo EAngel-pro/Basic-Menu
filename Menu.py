@@ -18,7 +18,7 @@ def window_boot():
                 entered_text=textentry.get() #collects text from entry box
                 output.delete(0.0, END)
                 try:
-                        definition = dict1[entered_text]
+                        definition = dict1[entered_text.lower()]
                 except:
                         definition = "That's not a day of the week, try again."
                 output.insert(END, definition)
@@ -43,20 +43,6 @@ def window_boot():
 
         #dictionary
         dict1 = {
-                "Monday": "Incorrect.",
-                "Tuesday": "Incorrect.",
-                "Wednesday": "Incorrect.",
-                "Thursday": "Incorrect.",
-                "Friday": "Incorrect.",
-                "Saturday": "Incorrect.",
-                "Sunday": "Incorrect.",
-                "MONDAY": "Incorrect.",
-                "TUESDAY": "Incorrect.",
-                "WEDNESDAY": "Incorrect.",
-                "THURSDAY": "Incorrect.",
-                "FRIDAY": "Incorrect.",
-                "SATURDAY": "Incorrect.",
-                "SUNDAY": "Incorrect.",
                 "monday": "Incorrect.",
                 "tuesday": "Incorrect.",
                 "wednesday": "Incorrect.",
@@ -64,9 +50,7 @@ def window_boot():
                 "friday": "Incorrect.",
                 "saturday": "Incorrect.",
                 "sunday": "Incorrect.",
-                thisDateName: "Correct.",
-                thisDateName.lower(): "Correct.",
-                thisDateName.upper(): "Correct."
+                thisDateName.lower(): "Correct."
                 }
         #exit label
         Button(window, text="Exit", width=14, command=close_window) .grid(row=7,column=0,sticky=W+E)
